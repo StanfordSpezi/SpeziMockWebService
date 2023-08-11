@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F64EA852A86B347006789D0 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64EA812A86B346006789D0 /* TestAppDelegate.swift */; };
+		2F64EA862A86B347006789D0 /* FHIRMockDataStorageProviderTestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64EA832A86B346006789D0 /* FHIRMockDataStorageProviderTestsView.swift */; };
+		2F64EA882A86B36C006789D0 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64EA872A86B36C006789D0 /* TestApp.swift */; };
+		2F64EA8B2A86B3DE006789D0 /* XCTestExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 2F64EA8A2A86B3DE006789D0 /* XCTestExtensions */; };
+		2F64EA8E2A86B46B006789D0 /* Spezi in Frameworks */ = {isa = PBXBuildFile; productRef = 2F64EA8D2A86B46B006789D0 /* Spezi */; };
 		2F68C3C8292EA52000B3E12C /* SpeziMockWebService in Frameworks */ = {isa = PBXBuildFile; productRef = 2F68C3C7292EA52000B3E12C /* SpeziMockWebService */; };
 		2F6D139A28F5F386007C25D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6D139928F5F386007C25D6 /* Assets.xcassets */; };
-		2F8A431329130A8C005D2B8F /* TestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A431229130A8C005D2B8F /* TestAppUITests.swift */; };
-		2FA7382C290ADFAA007ACEB9 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA7382B290ADFAA007ACEB9 /* TestApp.swift */; };
+		2F8A431329130A8C005D2B8F /* FHIRMockWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A431229130A8C005D2B8F /* FHIRMockWebServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +41,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F64EA812A86B346006789D0 /* TestAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
+		2F64EA832A86B346006789D0 /* FHIRMockDataStorageProviderTestsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHIRMockDataStorageProviderTestsView.swift; sourceTree = "<group>"; };
+		2F64EA872A86B36C006789D0 /* TestApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
 		2F68C3C6292E9F8F00B3E12C /* SpeziMockWebService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SpeziMockWebService; path = ../..; sourceTree = "<group>"; };
 		2F6D139228F5F384007C25D6 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6D139928F5F386007C25D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F6D13AC28F5F386007C25D6 /* TestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F8A431229130A8C005D2B8F /* TestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppUITests.swift; sourceTree = "<group>"; };
-		2FA7382B290ADFAA007ACEB9 /* TestApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
+		2F8A431229130A8C005D2B8F /* FHIRMockWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHIRMockWebServiceTests.swift; sourceTree = "<group>"; };
 		2FB0758A299DDB9000C0B37F /* TestApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestApp.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F64EA8E2A86B46B006789D0 /* Spezi in Frameworks */,
 				2F68C3C8292EA52000B3E12C /* SpeziMockWebService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,12 +66,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F64EA8B2A86B3DE006789D0 /* XCTestExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F64EA822A86B346006789D0 /* FHIRMockDataStorageProviderTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FHIRMockDataStorageProviderTests;
+			sourceTree = "<group>";
+		};
 		2F6D138928F5F384007C25D6 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +104,10 @@
 		2F6D139428F5F384007C25D6 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
-				2FA7382B290ADFAA007ACEB9 /* TestApp.swift */,
+				2F64EA822A86B346006789D0 /* FHIRMockDataStorageProviderTests */,
+				2F64EA872A86B36C006789D0 /* TestApp.swift */,
+				2F64EA812A86B346006789D0 /* TestAppDelegate.swift */,
+				2F64EA832A86B346006789D0 /* FHIRMockDataStorageProviderTestsView.swift */,
 				2F6D139928F5F386007C25D6 /* Assets.xcassets */,
 			);
 			path = TestApp;
@@ -98,7 +116,7 @@
 		2F6D13AF28F5F386007C25D6 /* TestAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2F8A431229130A8C005D2B8F /* TestAppUITests.swift */,
+				2F8A431229130A8C005D2B8F /* FHIRMockWebServiceTests.swift */,
 			);
 			path = TestAppUITests;
 			sourceTree = "<group>";
@@ -129,6 +147,7 @@
 			name = TestApp;
 			packageProductDependencies = (
 				2F68C3C7292EA52000B3E12C /* SpeziMockWebService */,
+				2F64EA8D2A86B46B006789D0 /* Spezi */,
 			);
 			productName = Example;
 			productReference = 2F6D139228F5F384007C25D6 /* TestApp.app */;
@@ -148,6 +167,9 @@
 				2F6D13AE28F5F386007C25D6 /* PBXTargetDependency */,
 			);
 			name = TestAppUITests;
+			packageProductDependencies = (
+				2F64EA8A2A86B3DE006789D0 /* XCTestExtensions */,
+			);
 			productName = ExampleUITests;
 			productReference = 2F6D13AC28F5F386007C25D6 /* TestAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -180,6 +202,10 @@
 				Base,
 			);
 			mainGroup = 2F6D138928F5F384007C25D6;
+			packageReferences = (
+				2F64EA892A86B3DE006789D0 /* XCRemoteSwiftPackageReference "XCTestExtensions" */,
+				2F64EA8C2A86B46B006789D0 /* XCRemoteSwiftPackageReference "Spezi" */,
+			);
 			productRefGroup = 2F6D139328F5F384007C25D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -213,7 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FA7382C290ADFAA007ACEB9 /* TestApp.swift in Sources */,
+				2F64EA862A86B347006789D0 /* FHIRMockDataStorageProviderTestsView.swift in Sources */,
+				2F64EA852A86B347006789D0 /* TestAppDelegate.swift in Sources */,
+				2F64EA882A86B36C006789D0 /* TestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F8A431329130A8C005D2B8F /* TestAppUITests.swift in Sources */,
+				2F8A431329130A8C005D2B8F /* FHIRMockWebServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +662,36 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		2F64EA892A86B3DE006789D0 /* XCRemoteSwiftPackageReference "XCTestExtensions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StanfordBDHG/XCTestExtensions.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.4.6;
+			};
+		};
+		2F64EA8C2A86B46B006789D0 /* XCRemoteSwiftPackageReference "Spezi" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StanfordSpezi/Spezi.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		2F64EA8A2A86B3DE006789D0 /* XCTestExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F64EA892A86B3DE006789D0 /* XCRemoteSwiftPackageReference "XCTestExtensions" */;
+			productName = XCTestExtensions;
+		};
+		2F64EA8D2A86B46B006789D0 /* Spezi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F64EA8C2A86B46B006789D0 /* XCRemoteSwiftPackageReference "Spezi" */;
+			productName = Spezi;
+		};
 		2F68C3C7292EA52000B3E12C /* SpeziMockWebService */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SpeziMockWebService;
