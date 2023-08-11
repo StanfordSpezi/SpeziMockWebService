@@ -26,9 +26,9 @@ The Spezi Mock Web Service Swift Package provides a [Spezi Component](https://sw
 
 <table>
    <tr>
-     <td><img height="500" alt="Screenshot showing an empty list with a placeholder stating: 'The Mock Web Service will display all requests that would be triggered by the application.'." src="Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Overview.png"></td>
-     <td><img height="500" alt="Screenshot showing two requests in the mock request list: One is a deletion request, and one is an addition." src="Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Requests.png"></td>
-     <td><img height="500" alt="Detail view of a mock request, showing that it is an addition with a short JSON body." src="Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Request.png"></td>
+     <td><img width="272" height="536" alt="Screenshot showing an empty list with a placeholder stating: 'The Mock Web Service will display all requests that would be triggered by the application.'." src="Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Overview.png"></td>
+     <td><img width="272" height="536" alt="Screenshot showing two requests in the mock request list: One is a deletion request, and one is an addition." src="Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Requests.png"></td>
+     <td><img width="272" height="536" alt="Detail view of a mock request, showing that it is an addition with a short JSON body." src="Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Request.png"></td>
    </tr>
    <tr>
      <td>The landing page of the <a href="https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/requestlist">RequestList</a>.</td>
