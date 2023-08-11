@@ -13,6 +13,7 @@ import PackageDescription
 
 let package = Package(
     name: "SpeziMockWebService",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v16),
         .watchOS(.v9)
@@ -20,9 +21,20 @@ let package = Package(
     products: [
         .library(name: "SpeziMockWebService", targets: ["SpeziMockWebService"])
     ],
+    dependencies: [
+        .package(url: "https://github.com/StanfordSpezi/Spezi", .upToNextMinor(from: "0.7.0")),
+        .package(url: "https://github.com/StanfordSpezi/SpeziViews", .upToNextMinor(from: "0.4.0"))
+    ],
     targets: [
         .target(
-            name: "SpeziMockWebService"
+            name: "SpeziMockWebService",
+            dependencies: [
+                .product(name: "Spezi", package: "Spezi"),
+                .product(name: "SpeziViews", package: "SpeziViews")
+            ],
+            resources: [
+                .process("Resources")
+            ]
         ),
         .testTarget(
             name: "SpeziMockWebServiceTests",
