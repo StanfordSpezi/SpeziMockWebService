@@ -25,18 +25,18 @@ Mock the interaction with a web service in a Spezi-based application.
 The Spezi Mock Web Service Swift Package provides a [Spezi Component](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/component) ([`MockWebService`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice)) to mock the interaction with a web service and display the requests in a user interface that can be used for demonstrations and debugging purposes ([`RequestList`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/requestlist)).
 
 <p float="left">
-    <p>
+    <div id="container">
         <img width="272" height="536" alt="Screenshot showing an empty list with a placeholder stating: 'The Mock Web Service will display all requests that would be triggered by the application.'." src="Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Overview.png">
         The landing page of the <a href="https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/requestlist">RequestList</a>.
-    </p>
-    <p>
+    </div>
+    <div id="container">
         <img width="272" height="536" alt="Screenshot showing two requests in the mock request list: One is a deletion request, and one is an addition." src="Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Requests.png">
         The <a href="https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/requestlist">RequestList</a> provides an overview of all sent requests.
-    </p>
-    <p>
+    </div>
+    <div id="container">
         <img width="272" height="536" alt="Detail view of a mock request, showing that it is an addition with a short JSON body." src="Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Request.png">
         The detail view of a single request.
-    </p>
+    </div>
 </p>
 
        
