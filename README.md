@@ -22,12 +22,6 @@ The Spezi Mock Web Service module provides user interface components to display 
 For more information, please refer to the [API documentation](https://swiftpackageindex.com/StanfordSpezi/SpeziMockWebService/documentation).
 
 
-## TODOs
-
-1. The Swift Package template includes a Swift Package Index configuration file to automatically build the package and [host the documentation on the Swift Package Index website](https://blog.swiftpackageindex.com/posts/auto-generating-auto-hosting-and-auto-updating-docc-documentation/). Adjust the `.spi.yml` file to include all targets that you want to build documentation for. You can follow the [instructions of the Swift Package Index](https://swiftpackageindex.com/add-a-package) to include your Swift Package in the Swift Package Index. You can link to the [API documentation](https://swiftpackageindex.com/StanfordSpezi/SpeziMockWebService/documentation) from your README file.
-2. Adjust the CITATION.cff file to amend information about the new Swift Package ([learn more about CITATION files on GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)) and [register the Swift Package on Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content). 
-
-
 ## Contributing
 
 Contributions to this project are welcome. Please make sure to read the [contribution guidelines](https://github.com/StanfordSpezi/.github/blob/main/CONTRIBUTING.md) and the [contributor covenant code of conduct](https://github.com/StanfordSpezi/.github/blob/main/CODE_OF_CONDUCT.md) first.
