@@ -1,7 +1,7 @@
 // swift-tools-version:5.8
 
 //
-// This source file is part of the TemplatePackage open source project
+// This source file is part of the Stanford Spezi open source project
 // 
 // SPDX-FileCopyrightText: 2022 Stanford University and the project authors (see CONTRIBUTORS.md)
 // 
@@ -12,22 +12,22 @@ import PackageDescription
 
 
 let package = Package(
-    name: "TemplatePackage",
+    name: "SpeziMockWebService",
     platforms: [
         .iOS(.v16),
         .watchOS(.v9)
     ],
     products: [
-        .library(name: "TemplatePackage", targets: ["TemplatePackage"])
+        .library(name: "SpeziMockWebService", targets: ["SpeziMockWebService"])
     ],
     targets: [
         .target(
-            name: "TemplatePackage"
+            name: "SpeziMockWebService"
         ),
         .testTarget(
-            name: "TemplatePackageTests",
+            name: "SpeziMockWebServiceTests",
             dependencies: [
-                .target(name: "TemplatePackage")
+                .target(name: "SpeziMockWebService")
             ]
         )
     ]
