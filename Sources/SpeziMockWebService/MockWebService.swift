@@ -47,7 +47,7 @@ import Spezi
 /// ```
 ///
 /// > Tip: You can use a ``RequestList`` to display the mock requests in your Spezi-based application.
-public actor MockWebService: Component, ObservableObjectProvider, ObservableObject {
+public actor MockWebService: Component, DefaultInitializable, ObservableObjectProvider, ObservableObject {
     @MainActor @Published var requests: [Request] = []
     
     
