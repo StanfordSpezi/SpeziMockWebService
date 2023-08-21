@@ -10,6 +10,40 @@ import SwiftUI
 
 
 /// Displays the recoded uploads collected by the ``MockWebService``.
+///
+/// @Row {
+///     @Column {
+///         @Image(source: "Overview", alt: "Screenshot showing an empty list with a placeholder stating: \"The Mock Web Service will display all requests that would be triggered by the application.\".") {
+///             The landing page of the ``RequestList``.
+///         }
+///     }
+///     @Column {
+///         @Image(source: "Requests", alt: "Screenshot showing two requests in the mock request list: One is a deletion request, and one is an addition.") {
+///             The ``RequestList`` provides an overview of all sent requests.
+///         }
+///     }
+///     @Column {
+///         @Image(source: "Request", alt: "Detail view of a mock request, showing that it is an addition with a short JSON body.") {
+///             The detail view of a single request.
+///         }
+///     }
+/// }
+///
+///
+/// ## Usage
+///
+/// You can use the ``RequestList``
+/// in a [`NavigationStack`](https://developer.apple.com/documentation/swiftui/navigationstack) inside any
+/// SwiftUI [`View`](https://developer.apple.com/documentation/swiftui/view) within a Spezi-based application:
+/// ```swift
+/// struct ExampleView: View {
+///     var body: some View {
+///         NavigationStack {
+///             FHIRMockWebServiceTestsView()
+///         }
+///     }
+/// }
+/// ```
 public struct RequestList: View {
     @EnvironmentObject private var webService: MockWebService
     
@@ -41,6 +75,7 @@ public struct RequestList: View {
     }
     
     
+    /// Creates an instance of a ``RequestList``.
     public init() {}
     
     
