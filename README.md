@@ -29,10 +29,43 @@ The Spezi Mock Web Service Swift Package provides a [Spezi Component](https://sw
 | The landing page of the [RequestList](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/requestlist) | The [RequestList](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/requestlist) provides an overview of all sent requests. | The detail view of a single request. |
 
 
+## Setup
+
+
+### 1. Add Spezi Mock Web Service as a Dependency
+
+You need to add the Spezi Mock Web Service Swift package to
+[your app in Xcode](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app#) or
+[Swift package](https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode#Add-a-dependency-on-another-Swift-package).
+
+> [!IMPORTANT]  
+> If your application is not yet configured to use Spezi, follow the [Spezi setup article](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/setup) setup the core Spezi infrastructure.
+
+
+### 2. Register the Component
+
+The [`MockWebService`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice) component needs to be registered in a Spezi-based application using the 
+[`configuration`](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/speziappdelegate/configuration) in a
+[`SpeziAppDelegate`](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/speziappdelegate):
+```swift
+class ExampleAppDelegate: SpeziAppDelegate {
+    override var configuration: Configuration {
+        Configuration {
+            MockWebService()
+            // ...
+        }
+    }
+}
+```
+
+> [!NOTE]  
+> You can learn more about a [`Component` in the Spezi documentation](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/component).
+
+
 ## Example
 
-The following example demonstrates the usage of the Swift Package in a SwiftUI `View`, accessing the [`MockWebService`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice) using the `@EnvironmentObject` property wrapper.
-The `ExampleView` displays the [`RequestList`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/requestlist) in a `NavigationStack` and has a private function that uses the injected [`MockWebService`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice) to call the [`MockWebService/upload(path:body:)`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice/upload(path:body:)) and [`MockWebService/remove(path:)`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice/remove(path:)) functions, mocking the interaction with a real web service.
+The following example demonstrates the usage of the Swift Package in a SwiftUI [`View`](https://developer.apple.com/documentation/swiftui/view),
+accessing the [`MockWebService`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice) using the [`@EnvironmentObject`](https://developer.apple.com/documentation/swiftui/environmentobject) property wrapper.
 
 ```swift
 import SpeziMockWebService
