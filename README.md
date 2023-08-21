@@ -31,14 +31,16 @@ The Spezi Mock Web Service Swift Package provides a [Spezi Component](https://sw
 
 ## Setup
 
+
 ### 1. Add Spezi Mock Web Service as a Dependency
 
 You need to add the Spezi Mock Web Service Swift package to ...
 - ... your app: [Apple Developer - Adding package dependencies to your app](https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app#).
 - ... Swift package: [Apple Developer - Add a dependency on another Swift package](https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode#Add-a-dependency-on-another-Swift-package).
 
-[!IMPORTANT]  
-If your application is not yet configured to use Spezi, follow the [Spezi setup article](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/setup) setup the core Spezi infrastructure.
+> [!IMPORTANT]  
+> If your application is not yet configured to use Spezi, follow the [Spezi setup article](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/setup) setup the core Spezi infrastructure.
+
 
 ### 2. Register the Component
 
@@ -56,8 +58,8 @@ class ExampleAppDelegate: SpeziAppDelegate {
 }
 ```
 
-[!NOTE]  
-You can learn more about a [`Component` in the Spezi documentation](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/component).
+> [!NOTE]  
+> You can learn more about a [`Component` in the Spezi documentation](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/component).
 
 
 ## Example
