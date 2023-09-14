@@ -20,16 +20,19 @@ struct RequestHeader: View {
                 case .add:
                     Image(systemName: "arrow.up.doc.fill")
                         .foregroundColor(.green)
+                        .accessibilityHidden(true)
                 case .delete:
                     Image(systemName: "trash.fill")
                         .foregroundColor(.red)
+                        .accessibilityHidden(true)
                 }
-                Text("/\(request.path)/")
+                Text(verbatim: "/\(request.path)/")
+                    .accessibilityLabel("Path: \(request.path)")
             }
                 .font(.title3)
                 .bold()
                 .padding(.bottom, 12)
-            Text("On \(format(request.date))")
+            Text("ON_DATE \(format(request.date))", bundle: .module)
                 .font(.subheadline)
         }
     }
