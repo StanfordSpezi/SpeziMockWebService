@@ -21,7 +21,7 @@ final class FHIRMockWebServiceTests: XCTestCase {
         XCTAssert(app.images["Previous Page"].waitForExistence(timeout: 2))
         app.images["Previous Page"].tap()
         
-        XCTAssert(app.staticTexts["/Test/"].waitForExistence(timeout: 2))
+        XCTAssert(app.staticTexts["Request: /Test/"].waitForExistence(timeout: 2))
         XCTAssert(app.staticTexts["{\"test\": \"test\"}"].waitForExistence(timeout: 2))
         
         app.navigationBars.buttons["Mock Requests"].tap()
@@ -29,6 +29,6 @@ final class FHIRMockWebServiceTests: XCTestCase {
         XCTAssert(app.images["Trash"].waitForExistence(timeout: 2))
         app.images["Trash"].tap()
         
-        XCTAssert(app.staticTexts["/TestRemoval/"].waitForExistence(timeout: 2))
+        XCTAssert(app.staticTexts["Request: /TestRemoval/"].waitForExistence(timeout: 2))
     }
 }

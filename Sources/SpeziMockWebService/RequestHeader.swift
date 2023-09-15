@@ -27,7 +27,8 @@ struct RequestHeader: View {
                         .accessibilityHidden(true)
                 }
                 Text(verbatim: "/\(request.path)/")
-                    .accessibilityLabel("Path: \(request.path)")
+                    .accessibilityLabel("Request: /\(request.path)/")
+                    .accessibilityAddTraits(.isHeader)
             }
                 .font(.title3)
                 .bold()
