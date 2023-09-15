@@ -56,6 +56,7 @@ public struct RequestList: View {
                 VStack(spacing: 32) {
                     Image(systemName: "server.rack")
                         .font(.system(size: 100))
+                        .accessibilityHidden(true)
                     Text(String(localized: "MOCK_REQUESTS_LIST_PLACEHOLDER", bundle: .module))
                         .multilineTextAlignment(.center)
                 }

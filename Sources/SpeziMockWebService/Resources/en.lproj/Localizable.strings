@@ -12,3 +12,5 @@
 "MOCK_REQUEST_DETAIL_HEADER" = "Request Header";
 "MOCK_REQUEST_DETAIL_BODY" = "Request Body";
 "MOCK_REQUEST_DETAIL_TITLE" = "Request";
+
+"ON_DATE %@" = "On %@";
