@@ -12,26 +12,26 @@ import SwiftUI
 
 
 struct FHIRMockWebServiceTestsView: View {
-    @EnvironmentObject var webService: MockWebService
-    
+    @Environment(MockWebService.self) var webService
+
     
     var body: some View {
         RequestList()
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Mock Requests") {
-                        injectNewObservations()
+                        Task {
+                            try await injectNewObservations()
+                        }
                     }
                 }
             }
     }
     
     
-    private func injectNewObservations() {
-        Task {
-            try await webService.upload(path: "Test", body: #"{"test": "test"}"#)
-            try await webService.remove(path: "TestRemoval")
-        }
+    private func injectNewObservations() async throws {
+        try await webService.upload(path: "Test", body: #"{"test": "test"}"#)
+        try await webService.remove(path: "TestRemoval")
     }
 }
 

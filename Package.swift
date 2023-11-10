@@ -1,4 +1,4 @@
-// swift-tools-version:5.8
+// swift-tools-version:5.9
 
 //
 // This source file is part of the Stanford Spezi open source project
@@ -15,15 +15,15 @@ let package = Package(
     name: "SpeziMockWebService",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v16),
-        .watchOS(.v9)
+        .iOS(.v17),
+        .watchOS(.v10)
     ],
     products: [
         .library(name: "SpeziMockWebService", targets: ["SpeziMockWebService"])
     ],
     dependencies: [
-        .package(url: "https://github.com/StanfordSpezi/Spezi", .upToNextMinor(from: "0.7.0")),
-        .package(url: "https://github.com/StanfordSpezi/SpeziViews", .upToNextMinor(from: "0.5.0"))
+        .package(url: "https://github.com/StanfordSpezi/Spezi", .upToNextMinor(from: "0.8.0")),
+        .package(url: "https://github.com/StanfordSpezi/SpeziViews", .upToNextMinor(from: "0.6.2"))
     ],
     targets: [
         .target(

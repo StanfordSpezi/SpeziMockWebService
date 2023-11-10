@@ -10,6 +10,12 @@ import Foundation
 import Spezi
 
 
+@Observable
+private class RequestListModel {
+    var requests: [Request] = []
+}
+
+
 /// Mocks the interaction with a web service usable for testing and demonstration purposes.
 ///
 /// > Important: If your application is not yet configured to use Spezi, follow the [Spezi setup article](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/setup) setup the core Spezi infrastructure.
@@ -47,9 +53,14 @@ import Spezi
 /// ```
 ///
 /// > Tip: You can use a ``RequestList`` to display the mock requests in your Spezi-based application.
-public actor MockWebService: Component, DefaultInitializable, ObservableObjectProvider, ObservableObject {
-    @MainActor @Published var requests: [Request] = []
-    
+public actor MockWebService: Module, DefaultInitializable, EnvironmentAccessible {
+    private let requestList = RequestListModel()
+
+
+    @MainActor var requests: [Request] {
+        requestList.requests
+    }
+
     
     /// Creates an instance of a ``MockWebService``.
     public init() { }
@@ -62,7 +73,7 @@ public actor MockWebService: Component, DefaultInitializable, ObservableObjectPr
     public func upload(path: String, body: String) async throws {
         try await withCheckedThrowingContinuation { continuation in
             Task { @MainActor in
-                requests.insert(Request(type: .add, path: path, body: body), at: 0)
+                requestList.requests.insert(Request(type: .add, path: path, body: body), at: 0)
                 continuation.resume()
             }
         }
@@ -73,7 +84,7 @@ public actor MockWebService: Component, DefaultInitializable, ObservableObjectPr
     public func remove(path: String) async throws {
         try await withCheckedThrowingContinuation { continuation in
             Task { @MainActor in
-                requests.insert(Request(type: .delete, path: path), at: 0)
+                requestList.requests.insert(Request(type: .delete, path: path), at: 0)
                 continuation.resume()
             }
         }
