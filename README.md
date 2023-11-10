@@ -65,7 +65,8 @@ class ExampleAppDelegate: SpeziAppDelegate {
 ## Example
 
 The following example demonstrates the usage of the Swift Package in a SwiftUI [`View`](https://developer.apple.com/documentation/swiftui/view),
-accessing the [`MockWebService`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice) using the [`@EnvironmentObject`](https://developer.apple.com/documentation/swiftui/environmentobject) property wrapper.
+accessing the [`MockWebService`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice)
+using the [`@Environment`](https://developer.apple.com/documentation/swiftui/environment) property wrapper.
 
 ```swift
 import SpeziMockWebService
@@ -73,7 +74,7 @@ import SwiftUI
 
 
 struct ExampleView: View {
-    @EnvironmentObject var webService: MockWebService
+    @Environment(MockWebService.self) var webService: MockWebService
     
     
     var body: some View {

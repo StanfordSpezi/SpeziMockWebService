@@ -37,13 +37,12 @@ private class RequestListModel {
 ///
 /// ## Usage
 ///
-/// As the ``MockWebService`` conforms to [`ObservableObjectProvider`](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/observableobjectprovider)
-/// and [`ObservableObject`](https://developer.apple.com/documentation/combine/observableobject),
-/// you can access it in a SwiftUI [`View`](https://developer.apple.com/documentation/swiftui/view)
-/// using the [`@EnvironmentObject`](https://developer.apple.com/documentation/swiftui/environmentobject) dependency injection mechanism.
+/// As the ``MockWebService`` conforms to [EnvironmentAccessible](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/environmentaccessible).
+/// You can access it in a SwiftUI [View](https://developer.apple.com/documentation/swiftui/view)
+/// using the [@Environment](https://developer.apple.com/documentation/swiftui/environment) dependency injection mechanism.
 /// ```swift
 /// struct FHIRMockWebServiceTestsView: View {
-///     @EnvironmentObject var webService: MockWebService
+///     @Environment(MockWebService.self) var webService: MockWebService
 ///
 ///
 ///     var body: some View {
