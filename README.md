@@ -22,7 +22,7 @@ Mock the interaction with a web service in a Spezi-based application.
 
 ## Overview
 
-The Spezi Mock Web Service Swift Package provides a [Spezi Component](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/component) ([`MockWebService`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice)) to mock the interaction with a web service and display the requests in a user interface that can be used for demonstrations and debugging purposes ([`RequestList`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/requestlist)).
+The Spezi Mock Web Service Swift Package provides a [Spezi Module](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/module) ([`MockWebService`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice)) to mock the interaction with a web service and display the requests in a user interface that can be used for demonstrations and debugging purposes ([`RequestList`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/requestlist)).
 
 | ![Screenshot showing an empty list with a placeholder stating: 'The Mock Web Service will display all requests that would be triggered by the application.'](Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Overview.png#gh-light-mode-only) ![Screenshot showing an empty list with a placeholder stating: 'The Mock Web Service will display all requests that would be triggered by the application.'](Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Overview~dark.png#gh-dark-mode-only) | ![Screenshot showing two requests in the mock request list: One is a deletion request, and one is an addition.](Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Requests.png#gh-light-mode-only) ![Screenshot showing two requests in the mock request list: One is a deletion request, and one is an addition.](Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Requests~dark.png#gh-dark-mode-only) | ![Detail view of a mock request, showing that it is an addition with a short JSON body.](Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Request.png#gh-light-mode-only) ![Detail view of a mock request, showing that it is an addition with a short JSON body.](Sources/SpeziMockWebService/SpeziMockWebService.docc/Resources/Request~dark.png#gh-dark-mode-only) |
 |:---:|:---:|:---:|
@@ -42,9 +42,10 @@ You need to add the Spezi Mock Web Service Swift package to
 > If your application is not yet configured to use Spezi, follow the [Spezi setup article](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/initial-setup) setup the core Spezi infrastructure.
 
 
-### 2. Register the Component
+### 2. Register the Module
 
-The [`MockWebService`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice) component needs to be registered in a Spezi-based application using the 
+The [`MockWebService`](https://swiftpackageindex.com/stanfordspezi/spezimockwebservice/documentation/spezimockwebservice/mockwebservice) module needs
+to be registered in a Spezi-based application using the 
 [`configuration`](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/speziappdelegate/configuration) in a
 [`SpeziAppDelegate`](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/speziappdelegate):
 ```swift
@@ -59,7 +60,7 @@ class ExampleAppDelegate: SpeziAppDelegate {
 ```
 
 > [!NOTE]  
-> You can learn more about a [`Component` in the Spezi documentation](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/component).
+> You can learn more about a [`Module` in the Spezi documentation](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/module).
 
 
 ## Example
