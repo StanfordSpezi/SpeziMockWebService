@@ -10,11 +10,17 @@ import Foundation
 import Spezi
 
 
+@Observable
+private class RequestListModel {
+    var requests: [Request] = []
+}
+
+
 /// Mocks the interaction with a web service usable for testing and demonstration purposes.
 ///
 /// > Important: If your application is not yet configured to use Spezi, follow the [Spezi setup article](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/setup) setup the core Spezi infrastructure.
 /// 
-/// The component needs to be registered in a Spezi-based application using the [`configuration`](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/speziappdelegate/configuration)
+/// The module needs to be registered in a Spezi-based application using the [`configuration`](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/speziappdelegate/configuration)
 /// in a [`SpeziAppDelegate`](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/speziappdelegate):
 /// ```swift
 /// class ExampleAppDelegate: SpeziAppDelegate {
@@ -26,18 +32,17 @@ import Spezi
 ///     }
 /// }
 /// ```
-/// > Tip: You can learn more about a [`Component` in the Spezi documentation](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/component).
+/// > Tip: You can learn more about a [`Module` in the Spezi documentation](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/module).
 ///
 ///
 /// ## Usage
 ///
-/// As the ``MockWebService`` conforms to [`ObservableObjectProvider`](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/observableobjectprovider)
-/// and [`ObservableObject`](https://developer.apple.com/documentation/combine/observableobject),
-/// you can access it in a SwiftUI [`View`](https://developer.apple.com/documentation/swiftui/view)
-/// using the [`@EnvironmentObject`](https://developer.apple.com/documentation/swiftui/environmentobject) dependency injection mechanism.
+/// As the ``MockWebService`` conforms to [EnvironmentAccessible](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/environmentaccessible).
+/// You can access it in a SwiftUI [View](https://developer.apple.com/documentation/swiftui/view)
+/// using the [@Environment](https://developer.apple.com/documentation/swiftui/environment) dependency injection mechanism.
 /// ```swift
 /// struct FHIRMockWebServiceTestsView: View {
-///     @EnvironmentObject var webService: MockWebService
+///     @Environment(MockWebService.self) var webService: MockWebService
 ///
 ///
 ///     var body: some View {
@@ -47,9 +52,14 @@ import Spezi
 /// ```
 ///
 /// > Tip: You can use a ``RequestList`` to display the mock requests in your Spezi-based application.
-public actor MockWebService: Component, DefaultInitializable, ObservableObjectProvider, ObservableObject {
-    @MainActor @Published var requests: [Request] = []
-    
+public actor MockWebService: Module, DefaultInitializable, EnvironmentAccessible {
+    private let requestList = RequestListModel()
+
+
+    @MainActor var requests: [Request] {
+        requestList.requests
+    }
+
     
     /// Creates an instance of a ``MockWebService``.
     public init() { }
@@ -62,7 +72,7 @@ public actor MockWebService: Component, DefaultInitializable, ObservableObjectPr
     public func upload(path: String, body: String) async throws {
         try await withCheckedThrowingContinuation { continuation in
             Task { @MainActor in
-                requests.insert(Request(type: .add, path: path, body: body), at: 0)
+                requestList.requests.insert(Request(type: .add, path: path, body: body), at: 0)
                 continuation.resume()
             }
         }
@@ -73,7 +83,7 @@ public actor MockWebService: Component, DefaultInitializable, ObservableObjectPr
     public func remove(path: String) async throws {
         try await withCheckedThrowingContinuation { continuation in
             Task { @MainActor in
-                requests.insert(Request(type: .delete, path: path), at: 0)
+                requestList.requests.insert(Request(type: .delete, path: path), at: 0)
                 continuation.resume()
             }
         }

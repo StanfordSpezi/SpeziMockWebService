@@ -2,7 +2,7 @@
 
 <!--
 #
-# This source file is part of the Stanford Spezi open source project
+# This source file is part of the Stanford Spezi open-source project
 #
 # SPDX-FileCopyrightText: 2022 Stanford University and the project authors (see CONTRIBUTORS.md)
 #
@@ -15,7 +15,7 @@ Mock the interaction with a web service in a Spezi-based application.
 
 ## Overview
 
-The Spezi Mock Web Service Swift Package provides a [Spezi Component](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/component) (``MockWebService``)
+The Spezi Mock Web Service Swift Package provides a [Spezi Module](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/module) (``MockWebService``)
 to mock the interaction with a web service and display the requests in a user interface that can be used for demonstrations and debugging purposes (``RequestList``).
 
 @Row {
@@ -48,9 +48,9 @@ You need to add the Spezi Mock Web Service Swift package to
 > Important: If your application is not yet configured to use Spezi, follow the [Spezi setup article](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/initial-setup) setup the core Spezi infrastructure.
 
 
-### 2. Register the Component
+### 2. Register the Module
 
-The ``MockWebService`` component needs to be registered in a Spezi-based application using the 
+The ``MockWebService`` module needs to be registered in a Spezi-based application using the 
 [`configuration`](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/speziappdelegate/configuration) in a
 [`SpeziAppDelegate`](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/speziappdelegate):
 ```swift
@@ -64,13 +64,13 @@ class ExampleAppDelegate: SpeziAppDelegate {
 }
 ```
 
-> Tip: You can learn more about a [`Component` in the Spezi documentation](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/component).
+> Tip: You can learn more about a [`Module` in the Spezi documentation](https://swiftpackageindex.com/stanfordspezi/spezi/documentation/spezi/module).
 
 
 ## Example
 
 The following example demonstrates the usage of the Swift Package in a SwiftUI [`View`](https://developer.apple.com/documentation/swiftui/view),
-accessing the ``MockWebService`` using the [`@EnvironmentObject`](https://developer.apple.com/documentation/swiftui/environmentobject) property wrapper.
+accessing the ``MockWebService`` using the [`@Environment`](https://developer.apple.com/documentation/swiftui/environment) property wrapper.
 
 ```swift
 import SpeziMockWebService
@@ -78,7 +78,7 @@ import SwiftUI
 
 
 struct ExampleView: View {
-    @EnvironmentObject var webService: MockWebService
+    @Environment(MockWebService.self) var webService: MockWebService
     
     
     var body: some View {

@@ -45,8 +45,8 @@ import SwiftUI
 /// }
 /// ```
 public struct RequestList: View {
-    @EnvironmentObject private var webService: MockWebService
-    
+    @Environment(MockWebService.self) private var webService
+
     
     public var body: some View {
         ZStack {
@@ -94,7 +94,7 @@ struct WebServicesList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             RequestList()
-                .environmentObject(MockWebService())
+                .environment(MockWebService())
         }
     }
 }

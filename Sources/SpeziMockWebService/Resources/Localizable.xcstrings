@@ -1,0 +1,77 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "MOCK_REQUEST_DETAIL_BODY" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request Body"
+          }
+        }
+      }
+    },
+    "MOCK_REQUEST_DETAIL_HEADER" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request Header"
+          }
+        }
+      }
+    },
+    "MOCK_REQUEST_DETAIL_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request"
+          }
+        }
+      }
+    },
+    "MOCK_REQUESTS_LIST_PLACEHOLDER" : {
+      "comment" : "MARK: - Mock Upload Data Storage Provider",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The Mock Web Service will display all requests that would be triggered by the application."
+          }
+        }
+      }
+    },
+    "MOCK_REQUESTS_LIST_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mock Requests"
+          }
+        }
+      }
+    },
+    "ON_DATE %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On %@"
+          }
+        }
+      }
+    },
+    "Request: /%@/" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request: /%@/"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

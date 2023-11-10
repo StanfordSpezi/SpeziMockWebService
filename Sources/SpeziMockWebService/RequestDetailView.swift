@@ -21,7 +21,7 @@ struct RequestDetailView: View {
             }
             if let body = request.body {
                 Section(String(localized: "MOCK_REQUEST_DETAIL_BODY", bundle: .module)) {
-                    LazyText(text: body)
+                    LazyText(verbatim: body)
                 }
             }
         }
